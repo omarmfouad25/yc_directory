@@ -12,7 +12,7 @@ import StartupCard, { StartupCardType } from '@/components/StartupCard';
 
 export const experimental_ppr = true
 const Startup = async  ({ params }: { params: { id: string } }) => {
-    const id = params.id;
+    const id = (await params).id;
     const [post, playlistRes] = await Promise.all([
         client.fetch(STARTUP_BY_ID_QUERY, { id }),
         client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: 'editors-choice' })

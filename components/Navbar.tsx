@@ -29,7 +29,7 @@ const Navbar = async () => {
                                 {/* <span className="max-sm:hidden">Logout</span> */}
                                 <LogOut className="size-6  text-red-600 cursor-pointer"/>
                             </button>
-                            {console.log(session)}
+                            {/* {console.log(session)} */}
 
                             <Link href={`/user/${session?.id}`}>
                                 <Avatar className="size-9">

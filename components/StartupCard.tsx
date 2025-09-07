@@ -19,7 +19,6 @@ const StartupCard = ({post}:{post: StartupCardType}) => {
          category
      } = post;
 
-    //  console.log(author)
 
   return (
     <li className="startup-card group">
