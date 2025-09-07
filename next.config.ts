@@ -1,22 +1,46 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-   experimental: {
+  experimental: {
     ppr: 'incremental',
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'omar-fouad.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+      },
+       {
+        protocol: 'https',
+        hostname: '*',
+      },
+    ],
   },
   // devIndicators:{
   //   appIsrStatus: true,
   //   buildActivity: true,
   //   buildActivityPosition: 'bottom-right'
   // }
- 
 };
 
-module.exports = {
-  images: {
-
-    domains: ['omar-fouad.com','placehold.co','cdn.sanity.io', 'avatars.githubusercontent.com', 'lh3.googleusercontent.com', 'pbs.twimg.com'],
-  },
-}
 export default nextConfig;
